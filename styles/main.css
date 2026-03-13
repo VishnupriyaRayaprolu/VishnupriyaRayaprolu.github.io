@@ -18,6 +18,28 @@ body {
   font-family: var(--font-sans);
   background: radial-gradient(circle at top left, #1d283a, #020617);
   color: var(--text);
+  line-height: 1.55;
+}
+
+/* Accessibility */
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: 0.75rem;
+  transform: translateY(-200%);
+  padding: 0.6rem 0.9rem;
+  border-radius: 0.6rem;
+  background: rgba(17, 24, 39, 0.95);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+  outline: 2px solid rgba(56, 189, 248, 0.65);
+  outline-offset: 2px;
 }
 
 /* Header / nav */
@@ -86,12 +108,34 @@ body {
   margin-bottom: 1.5rem;
 }
 
+.lede {
+  font-size: 1.05rem;
+  max-width: 62ch;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
 .btn-primary {
   display: inline-block;
   padding: 0.75rem 1.5rem;
   border-radius: 999px;
   background: linear-gradient(135deg, #06b6d4, #3b82f6);
   color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  border-radius: 999px;
+  background: rgba(17, 24, 39, 0.6);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  color: var(--text);
   text-decoration: none;
   font-weight: 500;
 }
@@ -114,6 +158,10 @@ body {
   max-width: 60ch;
 }
 
+.section-intro {
+  margin-top: -0.25rem;
+}
+
 /* Projects */
 
 .projects-grid {
@@ -130,6 +178,29 @@ body {
   border: 1px solid rgba(148, 163, 184, 0.2);
 }
 
+.card-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.badge {
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  color: #06121a;
+  background: rgba(56, 189, 248, 0.9);
+}
+
+.badge-muted {
+  color: var(--text);
+  background: rgba(148, 163, 184, 0.18);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
 .project-card h3 {
   margin-top: 0;
   margin-bottom: 0.5rem;
@@ -139,10 +210,82 @@ body {
   margin-bottom: 0.75rem;
 }
 
-.project-card a {
+.card-summary {
+  color: var(--muted);
+}
+
+.card-metrics {
+  margin: 0 0 0.9rem;
+  padding-left: 1.05rem;
+  color: rgba(229, 231, 235, 0.88);
+}
+
+.card-metrics strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.project-card a,
+.card-link {
   color: var(--accent);
   text-decoration: none;
   font-size: 0.9rem;
+}
+
+.project-card a:hover,
+.card-link:hover {
+  text-decoration: underline;
+}
+
+/* Methods / layout helpers */
+
+.two-col {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.surface {
+  background: rgba(17, 24, 39, 0.55);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 0.85rem;
+  padding: 1.15rem;
+}
+
+.h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.1rem;
+}
+
+.list {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--muted);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.stack {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.item-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.95em;
 }
 
 /* Footer */
@@ -161,5 +304,67 @@ body {
   .nav-links {
     gap: 1rem;
     font-size: 0.85rem;
+  }
+
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Case studies */
+
+.case-study {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3rem;
+}
+
+.case-study header {
+  margin-bottom: 1.25rem;
+}
+
+.crumb {
+  display: inline-block;
+  color: var(--muted);
+  text-decoration: none;
+  margin-bottom: 0.75rem;
+}
+
+.crumb:hover {
+  color: var(--accent);
+}
+
+.case-study h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+}
+
+.case-study .meta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin: 1.25rem 0 1.5rem;
+}
+
+.case-study .meta .surface {
+  padding: 0.95rem;
+}
+
+.case-study dt {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(156, 163, 175, 0.9);
+  margin-bottom: 0.3rem;
+}
+
+.case-study dd {
+  margin: 0;
+  color: rgba(229, 231, 235, 0.92);
+}
+
+@media (max-width: 860px) {
+  .case-study .meta {
+    grid-template-columns: 1fr;
   }
 }
