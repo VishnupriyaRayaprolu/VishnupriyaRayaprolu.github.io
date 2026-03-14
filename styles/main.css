@@ -1,10 +1,35 @@
+/* -------------------------------------------------------------------------
+   Theme: shadcn-style (compatible with preset avVTUah from tweakcn).
+   Paste your exported CSS from tweakcn here to override these values.
+   ------------------------------------------------------------------------- */
 :root {
-  --bg: #0f172a;
-  --bg-elevated: #111827;
-  --accent: #38bdf8;
-  --text: #e5e7eb;
-  --muted: #9ca3af;
-  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  /* Base */
+  --background: #09090b;
+  --foreground: #fafafa;
+  /* Cards & surfaces */
+  --card: #18181b;
+  --card-foreground: #fafafa;
+  /* Primary (accent for CTAs, links, badges) */
+  --primary: #a78bfa;
+  --primary-foreground: #18181b;
+  /* Muted (secondary text, borders) */
+  --muted: #27272a;
+  --muted-foreground: #a1a1aa;
+  /* Accent (hover states, highlights) */
+  --accent: #a78bfa;
+  --accent-foreground: #18181b;
+  /* Border & ring */
+  --border: #27272a;
+  --input: #27272a;
+  --ring: #a78bfa;
+  /* Legacy aliases (so existing classes keep working) */
+  --bg: var(--background);
+  --bg-elevated: var(--card);
+  --text: var(--foreground);
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: "Plus Jakarta Sans", var(--font-sans);
+  --radius: 0.625rem;
+  --radius-lg: 0.75rem;
 }
 
 *,
@@ -16,9 +41,11 @@
 body {
   margin: 0;
   font-family: var(--font-sans);
-  background: radial-gradient(circle at top left, #1d283a, #020617);
-  color: var(--text);
-  line-height: 1.55;
+  background: var(--background);
+  background-image: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(167, 139, 250, 0.15), transparent),
+    radial-gradient(ellipse 60% 40% at 100% 0%, rgba(139, 92, 246, 0.08), transparent);
+  color: var(--foreground);
+  line-height: 1.6;
 }
 
 /* Accessibility */
@@ -29,16 +56,16 @@ body {
   top: 0.75rem;
   transform: translateY(-200%);
   padding: 0.6rem 0.9rem;
-  border-radius: 0.6rem;
-  background: rgba(17, 24, 39, 0.95);
-  border: 1px solid rgba(148, 163, 184, 0.35);
-  color: var(--text);
+  border-radius: var(--radius);
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--foreground);
   text-decoration: none;
 }
 
 .skip-link:focus {
   transform: translateY(0);
-  outline: 2px solid rgba(56, 189, 248, 0.65);
+  outline: 2px solid var(--ring);
   outline-offset: 2px;
 }
 
@@ -48,8 +75,9 @@ body {
   position: sticky;
   top: 0;
   z-index: 10;
-  backdrop-filter: blur(10px);
-  background: linear-gradient(to bottom, rgba(15, 23, 42, 0.9), transparent);
+  backdrop-filter: blur(12px);
+  background: linear-gradient(to bottom, rgba(9, 9, 11, 0.85), transparent);
+  border-bottom: 1px solid var(--border);
 }
 
 .nav {
@@ -62,8 +90,10 @@ body {
 }
 
 .logo {
+  font-family: var(--font-display);
   font-weight: 700;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
+  color: var(--foreground);
 }
 
 .nav-links {
@@ -75,13 +105,15 @@ body {
 }
 
 .nav-links a {
-  color: var(--muted);
+  color: var(--muted-foreground);
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
-  color: var(--accent);
+  color: var(--primary);
 }
 
 /* Hero */
@@ -99,12 +131,16 @@ body {
 }
 
 .hero h1 {
+  font-family: var(--font-display);
   font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
   margin-bottom: 0.5rem;
+  color: var(--foreground);
 }
 
 .hero p {
-  color: var(--muted);
+  color: var(--muted-foreground);
   margin-bottom: 1.5rem;
 }
 
@@ -122,22 +158,35 @@ body {
 .btn-primary {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 999px;
-  background: linear-gradient(135deg, #06b6d4, #3b82f6);
-  color: white;
+  border-radius: var(--radius);
+  background: var(--primary);
+  color: var(--primary-foreground);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: filter 0.2s ease, transform 0.15s ease;
+}
+
+.btn-primary:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
 }
 
 .btn-secondary {
   display: inline-block;
   padding: 0.75rem 1.25rem;
-  border-radius: 999px;
-  background: rgba(17, 24, 39, 0.6);
-  border: 1px solid rgba(148, 163, 184, 0.25);
-  color: var(--text);
+  border-radius: var(--radius);
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--foreground);
   text-decoration: none;
   font-weight: 500;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.btn-secondary:hover {
+  border-color: var(--primary);
+  background: var(--muted);
 }
 
 /* Sections */
@@ -149,17 +198,66 @@ body {
 }
 
 .section h2 {
+  font-family: var(--font-display);
   font-size: 1.75rem;
-  margin-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.25rem;
+  color: var(--foreground);
+}
+
+.section-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+  margin-bottom: 0.5rem;
 }
 
 .section p {
-  color: var(--muted);
+  color: var(--muted-foreground);
   max-width: 60ch;
 }
 
 .section-intro {
   margin-top: -0.25rem;
+}
+
+.section a:not(.btn-primary):not(.btn-secondary) {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.section a:not(.btn-primary):not(.btn-secondary):hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* Projects */
+
+.about-metadata {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.about-metadata dt {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+  margin-bottom: 0.25rem;
+}
+
+.about-metadata dd {
+  margin: 0;
+  color: var(--foreground);
 }
 
 /* Projects */
@@ -172,10 +270,16 @@ body {
 }
 
 .project-card {
-  background: var(--bg-elevated);
-  border-radius: 0.75rem;
-  padding: 1.25rem;
-  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: var(--card);
+  border-radius: var(--radius-lg);
+  padding: 1.35rem;
+  border: 1px solid var(--border);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 1px var(--primary);
 }
 
 .card-eyebrow {
@@ -187,18 +291,19 @@ body {
 }
 
 .badge {
-  font-size: 0.75rem;
-  letter-spacing: 0.02em;
-  padding: 0.25rem 0.55rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.25rem 0.6rem;
   border-radius: 999px;
-  color: #06121a;
-  background: rgba(56, 189, 248, 0.9);
+  color: var(--primary-foreground);
+  background: var(--primary);
 }
 
 .badge-muted {
-  color: var(--text);
-  background: rgba(148, 163, 184, 0.18);
-  border: 1px solid rgba(148, 163, 184, 0.25);
+  color: var(--muted-foreground);
+  background: var(--muted);
+  border: 1px solid var(--border);
 }
 
 .project-card h3 {
@@ -211,29 +316,32 @@ body {
 }
 
 .card-summary {
-  color: var(--muted);
+  color: var(--muted-foreground);
 }
 
 .card-metrics {
   margin: 0 0 0.9rem;
   padding-left: 1.05rem;
-  color: rgba(229, 231, 235, 0.88);
+  color: var(--muted-foreground);
 }
 
 .card-metrics strong {
-  color: var(--text);
+  color: var(--foreground);
   font-weight: 600;
 }
 
 .project-card a,
 .card-link {
-  color: var(--accent);
+  color: var(--primary);
   text-decoration: none;
   font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
 .project-card a:hover,
 .card-link:hover {
+  color: var(--accent);
   text-decoration: underline;
 }
 
@@ -247,9 +355,9 @@ body {
 }
 
 .surface {
-  background: rgba(17, 24, 39, 0.55);
-  border: 1px solid rgba(148, 163, 184, 0.18);
-  border-radius: 0.85rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
   padding: 1.15rem;
 }
 
@@ -261,11 +369,11 @@ body {
 .list {
   margin: 0;
   padding-left: 1.1rem;
-  color: var(--muted);
+  color: var(--muted-foreground);
 }
 
 .muted {
-  color: var(--muted);
+  color: var(--muted-foreground);
 }
 
 .stack {
@@ -291,11 +399,11 @@ code {
 /* Footer */
 
 .site-footer {
-  border-top: 1px solid rgba(148, 163, 184, 0.2);
+  border-top: 1px solid var(--border);
   margin-top: 2rem;
   padding: 1.5rem 1.5rem 3rem;
   text-align: center;
-  color: var(--muted);
+  color: var(--muted-foreground);
 }
 
 /* Small screens */
