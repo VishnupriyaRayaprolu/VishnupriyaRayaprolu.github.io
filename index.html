@@ -12,21 +12,37 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <nav class="nav">
-      <div class="logo">Vishnu Priya</div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Work</a></li>
-        <li><a href="#papers">Papers</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
+  <aside class="sidebar" aria-label="Site navigation">
+    <div class="sidebar-inner">
+      <a href="#" class="sidebar-logo">Vishnu Priya</a>
+      <p class="sidebar-tagline">UX Researcher</p>
+      <nav class="sidebar-nav">
+        <ul class="sidebar-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Work</a></li>
+          <li><a href="#papers">Papers</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="sidebar-footer">
+        <a href="mailto:vishnupriyarayaprolu@gmail.com">Email</a>
+        <a href="https://linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </div>
+  </aside>
+
+  <button type="button" class="sidebar-toggle" aria-label="Open menu" aria-expanded="false">
+    <span class="sidebar-toggle-bar"></span>
+    <span class="sidebar-toggle-bar"></span>
+    <span class="sidebar-toggle-bar"></span>
+  </button>
+
+  <div class="main-wrap">
   <main id="main">
     <section id="hero" class="hero">
       <div class="hero-content">
@@ -222,6 +238,7 @@
   <footer class="site-footer">
     <p>© <span id="year"></span> Vishnu Priya. All rights reserved.</p>
   </footer>
+  </div>
 
   <script src="scripts/main.js"></script>
 </body>
