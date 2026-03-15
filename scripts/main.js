@@ -2,6 +2,26 @@
 const yearEl = document.getElementById("year");
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+// Sidebar toggle (mobile)
+const sidebar = document.querySelector(".sidebar");
+const sidebarToggle = document.querySelector(".sidebar-toggle");
+if (sidebar && sidebarToggle) {
+  sidebarToggle.addEventListener("click", () => {
+    const isOpen = sidebar.classList.toggle("open");
+    sidebarToggle.setAttribute("aria-expanded", isOpen);
+    sidebarToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+  });
+  document.querySelectorAll(".sidebar-links a[href^='#']").forEach((link) => {
+    link.addEventListener("click", () => {
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        sidebar.classList.remove("open");
+        sidebarToggle.setAttribute("aria-expanded", "false");
+        sidebarToggle.setAttribute("aria-label", "Open menu");
+      }
+    });
+  });
+}
+
 // Smooth scroll for in-page links
 const prefersReducedMotion =
   window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -9,7 +29,13 @@ const prefersReducedMotion =
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener("click", (e) => {
     const href = link.getAttribute("href");
-    if (!href || href === "#") return;
+    if (!href) return;
+
+    if (href === "#") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: prefersReducedMotion ? "auto" : "smooth" });
+      return;
+    }
 
     const targetId = href.slice(1);
     const target = document.getElementById(targetId);
@@ -19,3 +45,31 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     target.scrollIntoView({ behavior: prefersReducedMotion ? "auto" : "smooth" });
   });
 });
+
+// Active section highlighting in sidebar
+const sections = ["hero", "about", "experience", "papers", "projects", "skills", "resume", "contact"];
+const sidebarLinks = document.querySelectorAll('.sidebar-links a[href^="#"]');
+
+function updateActiveLink() {
+  const scrollY = window.scrollY;
+  let activeId = "hero";
+
+  for (let i = sections.length - 1; i >= 0; i--) {
+    const el = document.getElementById(sections[i]);
+    if (el && el.offsetTop <= scrollY + 150) {
+      activeId = sections[i];
+      break;
+    }
+  }
+
+  if (activeId === "hero") activeId = "about";
+
+  sidebarLinks.forEach((link) => {
+    const href = link.getAttribute("href");
+    const id = href ? href.slice(1) : "";
+    link.classList.toggle("active", id === activeId);
+  });
+}
+
+window.addEventListener("scroll", updateActiveLink);
+updateActiveLink();
