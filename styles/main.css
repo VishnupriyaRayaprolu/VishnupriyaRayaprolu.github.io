@@ -158,6 +158,25 @@ body {
   padding: 2rem 1.5rem;
 }
 
+.sidebar-photo-wrap {
+  margin-bottom: 1.25rem;
+}
+
+.sidebar-photo {
+  display: block;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dark .sidebar-photo {
+  border-color: var(--border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
 .sidebar-logo {
   font-family: var(--font-display);
   font-weight: 700;
