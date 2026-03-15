@@ -321,9 +321,32 @@ body {
   margin-bottom: 1.5rem;
 }
 
-.lede {
-  font-size: 1.05rem;
+.hero-body {
+  margin-bottom: 1.25rem;
   max-width: 62ch;
+}
+
+.hero-focus-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+  margin: 0 0 0.75rem;
+}
+
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-download-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+  color: var(--foreground);
 }
 
 .hero-cta {
@@ -414,35 +437,6 @@ body {
   text-decoration: underline;
 }
 
-/* About */
-
-.about-subtitle {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin: 0 0 1rem;
-  color: var(--foreground);
-}
-
-.about-body {
-  margin-bottom: 1.25rem;
-}
-
-.about-focus-label {
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--muted-foreground);
-  margin: 0 0 0.75rem;
-}
-
-.about-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
-}
-
 .tag {
   display: inline-block;
   padding: 0.35rem 0.85rem;
@@ -452,13 +446,6 @@ body {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 999px;
-  color: var(--foreground);
-}
-
-.about-download-heading {
-  font-size: 1rem;
-  font-weight: 600;
-  margin: 0 0 0.5rem;
   color: var(--foreground);
 }
 
@@ -479,21 +466,6 @@ body {
 
 .btn-download-cv strong {
   font-weight: 700;
-}
-
-.about-page-link {
-  font-size: 1rem;
-  font-weight: 600;
-  margin: 1.5rem 0 0;
-}
-
-.about-page-link a {
-  color: var(--primary);
-  text-decoration: none;
-}
-
-.about-page-link a:hover {
-  text-decoration: underline;
 }
 
 /* Projects */
