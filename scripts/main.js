@@ -43,6 +43,12 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
 
     e.preventDefault();
 
+    // About/hero: scroll to top of page
+    if (targetId === "hero") {
+      window.scrollTo({ top: 0, behavior: prefersReducedMotion ? "auto" : "smooth" });
+      return;
+    }
+
     // Scroll so the section label + title align to the top of the viewport
     const label = target.querySelector(".section-label");
     const heading = target.querySelector("h1, h2");
