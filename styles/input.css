@@ -557,6 +557,86 @@ body {
   letter-spacing: 0.02em;
 }
 
+/* Skills blocks */
+.skills-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.skills-block {
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.skills-block-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+  color: var(--foreground);
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  border: 1px solid;
+  border-radius: 4px;
+}
+
+.skills-block-design {
+  background: rgba(147, 197, 253, 0.08);
+  border-color: rgba(147, 197, 253, 0.4);
+}
+
+.skills-block-design .skill-tag {
+  background: rgba(147, 197, 253, 0.12);
+  border-color: rgba(147, 197, 253, 0.5);
+  color: #1e3a5f;
+}
+
+.skills-block-tools {
+  background: rgba(167, 243, 208, 0.08);
+  border-color: rgba(167, 243, 208, 0.4);
+}
+
+.skills-block-tools .skill-tag {
+  background: rgba(167, 243, 208, 0.12);
+  border-color: rgba(167, 243, 208, 0.5);
+  color: #14532d;
+}
+
+.skills-block-technical {
+  background: rgba(253, 186, 116, 0.08);
+  border-color: rgba(253, 186, 116, 0.4);
+}
+
+.skills-block-technical .skill-tag {
+  background: rgba(253, 186, 116, 0.12);
+  border-color: rgba(253, 186, 116, 0.5);
+  color: #7c2d12;
+}
+
+.skills-block-domain {
+  background: rgba(196, 181, 253, 0.08);
+  border-color: rgba(196, 181, 253, 0.4);
+}
+
+.skills-block-domain .skill-tag {
+  background: rgba(196, 181, 253, 0.12);
+  border-color: rgba(196, 181, 253, 0.5);
+  color: #4c1d95;
+}
+
 /* About metadata */
 .about-metadata {
   display: grid;
