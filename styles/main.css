@@ -514,7 +514,7 @@ body {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
   margin-top: 1.5rem;
 }
@@ -530,6 +530,56 @@ body {
 .project-card:hover {
   border-color: var(--primary);
   box-shadow: 0 0 0 1px var(--primary);
+}
+
+.project-card-box {
+  padding: 0;
+  overflow: hidden;
+}
+
+.project-card-box:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.project-card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.project-card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 1.25rem 1.25rem 0.5rem;
+  color: var(--foreground);
+}
+
+.project-card-desc {
+  font-size: 0.9rem;
+  color: var(--muted-foreground);
+  margin: 0;
+  padding: 0 1.25rem 1rem;
+  line-height: 1.5;
+}
+
+.project-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0 1.25rem 1.25rem;
+}
+
+.project-tag {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  background: #fff;
+  border: 1px solid #1a1a1a;
+  border-radius: 4px;
+  color: #1a1a1a;
 }
 
 .card-eyebrow {
