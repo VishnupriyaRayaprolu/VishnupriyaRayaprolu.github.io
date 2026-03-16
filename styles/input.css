@@ -498,6 +498,12 @@ body {
 }
 
 @media (min-width: 769px) {
+  .section {
+    min-height: 100vh;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
   .section:first-of-type {
     padding-top: 8rem;
   }
