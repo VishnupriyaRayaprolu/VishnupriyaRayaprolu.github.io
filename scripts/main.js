@@ -43,9 +43,10 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
 
     e.preventDefault();
 
-    // Scroll so the section title aligns to the top of the viewport
+    // Scroll so the section label + title align to the top of the viewport
+    const label = target.querySelector(".section-label");
     const heading = target.querySelector("h1, h2");
-    const scrollTarget = heading || target;
+    const scrollTarget = label || heading || target;
     scrollTarget.scrollIntoView({
       behavior: prefersReducedMotion ? "auto" : "smooth",
       block: "start",
