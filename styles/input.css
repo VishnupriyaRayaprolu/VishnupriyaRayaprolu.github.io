@@ -880,6 +880,8 @@ body {
 }
 
 .project-card-box {
+  display: flex;
+  flex-direction: column;
   padding: 0;
   overflow: hidden;
 }
@@ -953,6 +955,7 @@ body {
   flex-wrap: wrap;
   gap: 0.4rem;
   padding: 0 1.25rem 1.25rem;
+  margin-top: auto;
 }
 
 .project-tag {
