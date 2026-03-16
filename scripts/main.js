@@ -47,7 +47,7 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
 });
 
 // Active section highlighting in sidebar
-const sections = ["hero", "projects", "experience", "skills", "resume", "contact"];
+const sections = ["hero", "projects", "skills", "experience", "education", "contact"];
 const sidebarLinks = document.querySelectorAll('.sidebar-links a[href^="#"]');
 
 function updateActiveLink() {
