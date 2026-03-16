@@ -885,6 +885,19 @@ body {
   margin: 0 0 0.5rem;
 }
 
+.exp-gpa {
+  font-size: 0.9rem;
+  color: var(--muted-foreground);
+  margin: 0.5rem 0 0.75rem;
+}
+
+.exp-coursework-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--foreground);
+  margin: 0 0 0.35rem;
+}
+
 .item-content .list {
   margin: 0;
   padding-left: 0;
