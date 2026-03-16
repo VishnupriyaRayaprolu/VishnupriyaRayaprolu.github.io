@@ -381,7 +381,6 @@ body {
 }
 
 .hero-content {
-  position: relative;
   max-width: 1200px;
   margin: 0 auto;
   padding: 3rem 1.5rem 2rem;
@@ -389,27 +388,7 @@ body {
   text-align: center;
 }
 
-.hero-content::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    ellipse 80% 60% at 50% 0%,
-    rgba(124, 58, 237, 0.15) 0%,
-    transparent 70%
-  );
-  pointer-events: none;
-  animation: hero-orb-pulse 8s ease-in-out infinite;
-}
-
-@keyframes hero-orb-pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.7; }
-}
-
-.hero h1,
-.hero-title {
-  position: relative;
+.hero h1 {
   font-family: var(--font-display);
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 700;
@@ -421,37 +400,19 @@ body {
 
 .hero p {
   color: var(--muted-foreground);
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 
 .hero-body {
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.25rem;
   max-width: 95ch;
   margin-left: auto;
   margin-right: auto;
 }
 
-.hero-pill-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  justify-content: center;
-  margin-bottom: 1.5rem;
-}
-
-.hero-pill-tag {
-  display: inline-block;
-  padding: 0.3rem 0.9rem;
-  border: 1px solid rgba(192, 132, 252, 0.4);
-  border-radius: 999px;
-  font-size: 0.78rem;
-  color: #c084fc;
-  transition: border-color 0.2s ease, background 0.2s ease;
-}
-
-.hero-pill-tag:hover {
-  border-color: rgba(192, 132, 252, 0.7);
-  background: rgba(192, 132, 252, 0.08);
+.hero-keyword {
+  font-weight: 700;
+  color: var(--primary);
 }
 
 .hero-tags {
@@ -481,19 +442,19 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.6rem;
-  margin-bottom: 0.75rem;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
 }
 
 .hero-contact-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  padding: 0.45rem 1rem;
-  font-size: 0.85rem;
+  gap: 0.5rem;
+  padding: 0.6rem 1.25rem;
+  font-size: 0.95rem;
   font-weight: 600;
   color: var(--foreground);
-  background: transparent;
+  background: var(--muted);
   border: 1px solid var(--border);
   border-radius: 6px;
   text-decoration: none;
@@ -501,14 +462,12 @@ body {
 }
 
 .hero-contact-btn:hover {
-  background: var(--muted);
+  background: var(--card);
   border-color: var(--foreground);
 }
 
 .hero-contact-icon {
   flex-shrink: 0;
-  width: 16px;
-  height: 16px;
 }
 
 .hero-download-wrap {
@@ -521,10 +480,10 @@ body {
 .hero-download-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  padding: 0.5rem 1.1rem;
-  font-size: 0.85rem;
-  font-weight: 600;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  font-size: 1.05rem;
+  font-weight: 700;
   color: #fff;
   background: #7c3aed;
   border: none;
@@ -837,9 +796,15 @@ body {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: 1fr;
   gap: 1.5rem;
   margin-top: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .project-card {
