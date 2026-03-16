@@ -292,6 +292,7 @@ body {
 .sidebar-footer {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.5rem;
   padding-top: 1.5rem;
   margin-top: auto;
