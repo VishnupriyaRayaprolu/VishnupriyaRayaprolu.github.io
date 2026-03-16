@@ -929,12 +929,31 @@ body {
   min-height: 56px;
   overflow: hidden;
   display: block;
+  position: relative;
 }
 
 .exp-logo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.exp-logo img.exp-logo-light {
+  display: block;
+}
+
+.exp-logo img.exp-logo-dark {
+  display: none;
+  position: absolute;
+  inset: 0;
+}
+
+.dark .exp-logo img.exp-logo-light {
+  display: none;
+}
+
+.dark .exp-logo img.exp-logo-dark {
+  display: block;
 }
 
 .item-content {
