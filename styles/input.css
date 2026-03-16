@@ -667,10 +667,14 @@ body {
   border-color: rgba(147, 197, 253, 0.4);
 }
 
+.skills-block-design .skills-block-title,
+.skills-block-design .skill-tag {
+  color: rgb(96, 165, 250);
+}
+
 .skills-block-design .skill-tag {
   background: rgba(147, 197, 253, 0.12);
   border-color: rgba(147, 197, 253, 0.5);
-  color: rgb(96, 165, 250);
 }
 
 .skills-block-tools {
@@ -678,10 +682,14 @@ body {
   border-color: rgba(167, 243, 208, 0.4);
 }
 
+.skills-block-tools .skills-block-title,
+.skills-block-tools .skill-tag {
+  color: rgb(34, 197, 94);
+}
+
 .skills-block-tools .skill-tag {
   background: rgba(167, 243, 208, 0.12);
   border-color: rgba(167, 243, 208, 0.5);
-  color: rgb(34, 197, 94);
 }
 
 .skills-block-technical {
@@ -689,10 +697,14 @@ body {
   border-color: rgba(253, 186, 116, 0.4);
 }
 
+.skills-block-technical .skills-block-title,
+.skills-block-technical .skill-tag {
+  color: rgb(251, 146, 60);
+}
+
 .skills-block-technical .skill-tag {
   background: rgba(253, 186, 116, 0.12);
   border-color: rgba(253, 186, 116, 0.5);
-  color: rgb(251, 146, 60);
 }
 
 .skills-block-domain {
@@ -700,24 +712,32 @@ body {
   border-color: rgba(196, 181, 253, 0.4);
 }
 
+.skills-block-domain .skills-block-title,
 .skills-block-domain .skill-tag {
-  background: rgba(196, 181, 253, 0.12);
-  border-color: rgba(196, 181, 253, 0.5);
   color: rgb(167, 139, 250);
 }
 
+.skills-block-domain .skill-tag {
+  background: rgba(196, 181, 253, 0.12);
+  border-color: rgba(196, 181, 253, 0.5);
+}
+
+.dark .skills-block-design .skills-block-title,
 .dark .skills-block-design .skill-tag {
   color: rgb(147, 197, 253);
 }
 
+.dark .skills-block-tools .skills-block-title,
 .dark .skills-block-tools .skill-tag {
   color: rgb(134, 239, 172);
 }
 
+.dark .skills-block-technical .skills-block-title,
 .dark .skills-block-technical .skill-tag {
   color: rgb(253, 186, 116);
 }
 
+.dark .skills-block-domain .skills-block-title,
 .dark .skills-block-domain .skill-tag {
   color: rgb(196, 181, 253);
 }
