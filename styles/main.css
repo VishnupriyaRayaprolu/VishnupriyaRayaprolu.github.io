@@ -705,6 +705,26 @@ body {
   color: rgb(196, 181, 253);
 }
 
+.skills-block-certifications {
+  background: rgba(34, 211, 238, 0.08);
+  border-color: rgba(34, 211, 238, 0.4);
+}
+
+.skills-block-certifications .skills-block-title,
+.skills-block-certifications .skill-tag {
+  color: rgb(6, 182, 212);
+}
+
+.skills-block-certifications .skill-tag {
+  background: rgba(34, 211, 238, 0.12);
+  border-color: rgba(34, 211, 238, 0.5);
+}
+
+.dark .skills-block-certifications .skills-block-title,
+.dark .skills-block-certifications .skill-tag {
+  color: rgb(34, 211, 238);
+}
+
 /* Projects */
 
 .projects-grid {
