@@ -410,6 +410,11 @@ body {
   margin-right: auto;
 }
 
+.hero-keyword {
+  font-weight: 700;
+  color: var(--primary);
+}
+
 .hero-tags {
   display: flex;
   flex-wrap: wrap;
