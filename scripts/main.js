@@ -1,3 +1,60 @@
+// Theme toggle (dark/light mode)
+const THEME_KEY = "portfolio-theme";
+
+function getStoredTheme() {
+  return localStorage.getItem(THEME_KEY);
+}
+
+function setStoredTheme(theme) {
+  if (theme) localStorage.setItem(THEME_KEY, theme);
+  else localStorage.removeItem(THEME_KEY);
+}
+
+function getSystemTheme() {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+}
+
+function applyTheme(theme) {
+  const html = document.documentElement;
+  if (theme === "dark") {
+    html.classList.add("dark");
+  } else {
+    html.classList.remove("dark");
+  }
+}
+
+function initTheme() {
+  const stored = getStoredTheme();
+  const theme = stored || getSystemTheme();
+  applyTheme(theme);
+}
+
+function toggleTheme() {
+  const html = document.documentElement;
+  const isDark = html.classList.contains("dark");
+  const next = isDark ? "light" : "dark";
+  applyTheme(next);
+  setStoredTheme(next);
+  updateThemeToggleLabel();
+}
+
+function updateThemeToggleLabel() {
+  const themeToggle = document.querySelector(".theme-toggle");
+  if (themeToggle) {
+    const isDark = document.documentElement.classList.contains("dark");
+    themeToggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+    themeToggle.setAttribute("title", isDark ? "Switch to light mode" : "Switch to dark mode");
+  }
+}
+
+const themeToggle = document.querySelector(".theme-toggle");
+if (themeToggle) {
+  themeToggle.addEventListener("click", toggleTheme);
+  updateThemeToggleLabel();
+}
+
+initTheme();
+
 // Set current year in footer
 const yearEl = document.getElementById("year");
 if (yearEl) yearEl.textContent = new Date().getFullYear();
