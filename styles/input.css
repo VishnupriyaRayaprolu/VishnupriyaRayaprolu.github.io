@@ -955,6 +955,73 @@ code {
   font-size: 0.95em;
 }
 
+/* Contact */
+.contact-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 2rem 2rem;
+  margin-top: 1.5rem;
+}
+
+.contact-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.contact-email {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+  color: var(--foreground);
+}
+
+.contact-message {
+  font-size: 0.95rem;
+  color: var(--muted-foreground);
+  margin: 0;
+}
+
+.contact-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--card);
+  color: var(--foreground);
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.contact-btn:hover {
+  border-color: var(--primary);
+  background: var(--muted);
+}
+
+.contact-btn-send {
+  background: var(--primary);
+  color: var(--primary-foreground);
+  border-color: var(--primary);
+}
+
+.contact-btn-send:hover {
+  filter: brightness(1.1);
+  border-color: var(--primary);
+  background: var(--primary);
+}
+
 /* Footer */
 .site-footer {
   border-top: 1px solid var(--border);

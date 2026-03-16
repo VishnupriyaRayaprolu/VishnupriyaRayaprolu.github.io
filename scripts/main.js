@@ -85,3 +85,25 @@ function updateActiveLink() {
 
 window.addEventListener("scroll", updateActiveLink);
 updateActiveLink();
+
+// Copy email to clipboard
+const copyBtn = document.getElementById("copy-email");
+const emailEl = document.getElementById("contact-email");
+if (copyBtn && emailEl) {
+  copyBtn.addEventListener("click", async () => {
+    const email = emailEl.textContent.trim();
+    try {
+      await navigator.clipboard.writeText(email);
+      const originalText = copyBtn.textContent;
+      copyBtn.textContent = "Copied!";
+      setTimeout(() => {
+        copyBtn.textContent = originalText;
+      }, 2000);
+    } catch (err) {
+      copyBtn.textContent = "Copy failed";
+      setTimeout(() => {
+        copyBtn.textContent = "Copy email";
+      }, 2000);
+    }
+  });
+}
