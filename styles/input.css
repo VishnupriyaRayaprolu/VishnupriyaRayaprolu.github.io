@@ -445,14 +445,9 @@ body {
 
 .hero-body {
   margin-bottom: 1.25rem;
-  max-width: 62ch;
+  max-width: 75ch;
   margin-left: auto;
   margin-right: auto;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
-  line-clamp: 4;
-  overflow: hidden;
 }
 
 .hero-keyword {
