@@ -877,10 +877,13 @@ body {
   flex-shrink: 0;
   width: 56px;
   height: 56px;
+  min-width: 56px;
+  min-height: 56px;
   border: 1px solid var(--border);
   border-radius: 4px;
   overflow: hidden;
   background: var(--muted);
+  display: block;
 }
 
 .exp-logo img {
