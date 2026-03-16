@@ -221,13 +221,20 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
+.sidebar-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 0.5rem;
+  margin-bottom: 2rem;
+}
+
 .sidebar-logo {
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 0.95rem;
   letter-spacing: 0.02em;
   color: var(--foreground);
   text-decoration: none;
-  margin-bottom: 0.25rem;
   transition: color 0.2s ease;
 }
 
@@ -238,10 +245,10 @@ body {
 .sidebar-tagline {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
-  font-size: 0.875rem;
+  gap: 0.35rem;
+  font-size: 0.75rem;
   color: var(--muted-foreground);
-  margin: 0 0 2rem;
+  margin: 0;
 }
 
 .sidebar-tagline-icon {
