@@ -963,6 +963,7 @@ code {
   background: var(--primary);
   color: #fff;
   border-color: var(--primary);
+  text-decoration: underline;
 }
 
 /* Footer */
