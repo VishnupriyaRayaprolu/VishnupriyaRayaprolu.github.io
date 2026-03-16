@@ -42,7 +42,14 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     if (!target) return;
 
     e.preventDefault();
-    target.scrollIntoView({ behavior: prefersReducedMotion ? "auto" : "smooth" });
+
+    // Scroll so the section title aligns to the top of the viewport
+    const heading = target.querySelector("h1, h2");
+    const scrollTarget = heading || target;
+    scrollTarget.scrollIntoView({
+      behavior: prefersReducedMotion ? "auto" : "smooth",
+      block: "start",
+    });
   });
 });
 
