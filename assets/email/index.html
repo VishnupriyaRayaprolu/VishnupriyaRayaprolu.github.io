@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact | Vishnu Priya</title>
+  <script>
+    (function() {
+      const stored = localStorage.getItem("portfolio-theme");
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const theme = stored || (prefersDark ? "dark" : "light");
+      if (theme === "dark") document.documentElement.classList.add("dark");
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../styles/main.css" />
+  <style>
+    .email-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      text-align: center;
+    }
+    .email-page h1 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--foreground);
+    }
+    .email-page .email-value {
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      color: var(--foreground);
+    }
+    .email-page .email-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+    .email-page .back-link {
+      font-size: 0.95rem;
+      color: var(--muted-foreground);
+      text-decoration: none;
+    }
+    .email-page .back-link:hover {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="email-page">
+    <h1>Get in touch</h1>
+    <p class="email-value" id="email-display">vr362@cornell.edu</p>
+    <p class="contact-message" style="margin-bottom: 1.5rem; color: var(--muted-foreground);">I'm currently open to new opportunities and collaborations.</p>
+    <div class="email-actions">
+      <button type="button" class="contact-btn" id="copy-email" aria-label="Copy email">Copy email</button>
+      <a href="mailto:vr362@cornell.edu" class="contact-btn contact-btn-send" aria-label="Send email">Send email →</a>
+    </div>
+    <a href="../../index.html" class="back-link">← Back to portfolio</a>
+  </div>
+  <script>
+    const copyBtn = document.getElementById("copy-email");
+    const emailEl = document.getElementById("email-display");
+    if (copyBtn && emailEl) {
+      copyBtn.addEventListener("click", async () => {
+        const email = emailEl.textContent.trim();
+        try {
+          await navigator.clipboard.writeText(email);
+          const originalText = copyBtn.textContent;
+          copyBtn.textContent = "Copied!";
+          setTimeout(() => { copyBtn.textContent = originalText; }, 2000);
+        } catch (err) {
+          copyBtn.textContent = "Copy failed";
+          setTimeout(() => { copyBtn.textContent = "Copy email"; }, 2000);
+        }
+      });
+    }
+  </script>
+</body>
+</html>
