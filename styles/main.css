@@ -314,6 +314,7 @@ body {
   margin: 0 auto;
   padding: 3rem 1.5rem 2rem;
   width: 100%;
+  text-align: center;
 }
 
 .hero h1 {
@@ -333,6 +334,8 @@ body {
 .hero-body {
   margin-bottom: 1.25rem;
   max-width: 62ch;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-tags {
@@ -340,6 +343,7 @@ body {
   flex-wrap: wrap;
   gap: 0.75rem;
   margin-bottom: 2rem;
+  justify-content: center;
 }
 
 .hero-tags .tag {
@@ -361,33 +365,27 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem 2.5rem;
-  background: #1a1a1a;
-  border: 3px solid #1a1a1a;
-  border-radius: 4px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-  max-width: fit-content;
   margin: 0 auto;
 }
 
 .hero .btn-download-cv {
   display: inline-block;
-  padding: 0.9rem 2.25rem;
+  padding: 1rem 2.5rem;
   font-size: 1.05rem;
   font-weight: 700;
-  background: #fff;
-  color: #1a1a1a;
-  border: 2px solid #fff;
+  background: #1a1a1a;
+  color: #fff;
+  border: 2px solid #1a1a1a;
   border-radius: 4px;
   text-decoration: none;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  transition: background 0.2s ease, color 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 .hero .btn-download-cv:hover {
-  background: #1a1a1a;
+  background: #333;
   color: #fff;
-  border-color: #fff;
+  border-color: #333;
 }
 
 /* Base Download CV button (Resume section, etc.) */
