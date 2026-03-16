@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Contact | Vishnu Priya</title>
+  <title>Contact Links | Vishnu Priya</title>
   <script>
     (function() {
       const stored = localStorage.getItem("portfolio-theme");
@@ -15,7 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../styles/main.css" />
   <style>
-    .email-page {
+    .contact-links-page {
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -24,39 +24,77 @@
       padding: 2rem;
       text-align: center;
     }
-    .email-page h1 {
+    .contact-links-page h1 {
       font-size: 1.5rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       color: var(--foreground);
     }
-    .email-page .email-value {
+    .contact-links-page .contact-links-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      width: 100%;
+      max-width: 320px;
+    }
+    .contact-links-page .contact-link-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.25rem;
+      background: var(--muted);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--foreground);
+      text-decoration: none;
+      font-weight: 600;
+      transition: border-color 0.2s ease, background 0.2s ease;
+    }
+    .contact-links-page .contact-link-item:hover {
+      background: var(--card);
+      border-color: var(--primary);
+    }
+    .contact-links-page .email-value {
       font-size: 1.75rem;
       font-weight: 600;
       margin-bottom: 1.5rem;
       color: var(--foreground);
     }
-    .email-page .email-actions {
+    .contact-links-page .email-actions {
       display: flex;
       gap: 1rem;
       flex-wrap: wrap;
       justify-content: center;
       margin-bottom: 2rem;
     }
-    .email-page .back-link {
+    .contact-links-page .back-link {
       font-size: 0.95rem;
       color: var(--muted-foreground);
       text-decoration: none;
     }
-    .email-page .back-link:hover {
+    .contact-links-page .back-link:hover {
       color: var(--primary);
       text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <div class="email-page">
-    <h1>Get in touch</h1>
-    <p class="email-value" id="email-display">vr362@cornell.edu</p>
+  <div class="contact-links-page">
+    <h1>Contact links</h1>
+    <div class="contact-links-grid">
+      <a href="mailto:vr362@cornell.edu" class="contact-link-item">
+        <span>Email</span>
+        <span id="email-display">vr362@cornell.edu</span>
+      </a>
+      <a href="https://linkedin.com/in/vishnupriya-rayaprolu-448028288" target="_blank" rel="noreferrer" class="contact-link-item">
+        <span>LinkedIn</span>
+        <span>→</span>
+      </a>
+      <a href="https://github.com/VishnupriyaRayaprolu" target="_blank" rel="noreferrer" class="contact-link-item">
+        <span>GitHub</span>
+        <span>→</span>
+      </a>
+    </div>
     <p class="contact-message" style="margin-bottom: 1.5rem; color: var(--muted-foreground);">I'm currently open to new opportunities and collaborations.</p>
     <div class="email-actions">
       <button type="button" class="contact-btn" id="copy-email" aria-label="Copy email">Copy email</button>
