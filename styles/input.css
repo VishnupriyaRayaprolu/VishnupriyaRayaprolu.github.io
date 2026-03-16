@@ -657,7 +657,7 @@ body {
   display: inline-block;
   padding: 0.25rem 0.6rem;
   font-size: 0.7rem;
-  font-weight: 500;
+  font-weight: 600;
   border: 1px solid;
   border-radius: 4px;
 }
@@ -670,7 +670,7 @@ body {
 .skills-block-design .skill-tag {
   background: rgba(147, 197, 253, 0.12);
   border-color: rgba(147, 197, 253, 0.5);
-  color: #1e3a5f;
+  color: rgb(96, 165, 250);
 }
 
 .skills-block-tools {
@@ -681,7 +681,7 @@ body {
 .skills-block-tools .skill-tag {
   background: rgba(167, 243, 208, 0.12);
   border-color: rgba(167, 243, 208, 0.5);
-  color: #14532d;
+  color: rgb(34, 197, 94);
 }
 
 .skills-block-technical {
@@ -692,7 +692,7 @@ body {
 .skills-block-technical .skill-tag {
   background: rgba(253, 186, 116, 0.12);
   border-color: rgba(253, 186, 116, 0.5);
-  color: #7c2d12;
+  color: rgb(251, 146, 60);
 }
 
 .skills-block-domain {
@@ -703,7 +703,23 @@ body {
 .skills-block-domain .skill-tag {
   background: rgba(196, 181, 253, 0.12);
   border-color: rgba(196, 181, 253, 0.5);
-  color: #4c1d95;
+  color: rgb(167, 139, 250);
+}
+
+.dark .skills-block-design .skill-tag {
+  color: rgb(147, 197, 253);
+}
+
+.dark .skills-block-tools .skill-tag {
+  color: rgb(134, 239, 172);
+}
+
+.dark .skills-block-technical .skill-tag {
+  color: rgb(253, 186, 116);
+}
+
+.dark .skills-block-domain .skill-tag {
+  color: rgb(196, 181, 253);
 }
 
 /* About metadata */
