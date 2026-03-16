@@ -1041,26 +1041,12 @@ body {
   height: 48px;
   min-width: 48px;
   overflow: hidden;
-  border-radius: 6px;
-  background: var(--muted);
 }
 
 .exp-timeline-icon img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-}
-
-.exp-timeline-icon-placeholder {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 1.25rem;
-  color: var(--muted-foreground);
-  background: var(--muted);
+  object-fit: contain;
 }
 
 .exp-timeline-content {
