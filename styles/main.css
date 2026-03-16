@@ -357,23 +357,24 @@ body {
 .hero-tags {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
   justify-content: center;
-  gap: 0.5rem 0.25rem;
-  margin: 0 0 2rem;
 }
 
-.hero-tags span:not(.hero-tags-dot) {
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--foreground);
+.hero-tags .tag {
+  padding: 0.6rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: #fff;
+  border: 2px solid #1a1a1a;
+  border-radius: 4px;
+  color: #1a1a1a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 
-.hero-tags-dot {
-  font-size: 0.6rem;
-  color: var(--muted-foreground);
-  line-height: 1;
-  user-select: none;
+.hero-tags .tag:hover {
+  background: #f5f5f5;
 }
 
 .hero-download-wrap {
