@@ -193,9 +193,17 @@ body {
 }
 
 .sidebar-tagline {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
   font-size: 0.875rem;
   color: var(--muted-foreground);
   margin: 0 0 2rem;
+}
+
+.sidebar-tagline-icon {
+  flex-shrink: 0;
+  color: var(--muted-foreground);
 }
 
 .sidebar-nav {
