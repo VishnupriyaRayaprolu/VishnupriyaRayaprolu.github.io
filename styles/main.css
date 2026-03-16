@@ -452,11 +452,11 @@ body {
   max-width: 960px;
   margin: 0 auto;
   padding: 3rem 1.5rem 2rem;
+  border-top: 1px solid var(--border);
 }
 
 .section:first-of-type {
   padding-top: 6rem;
-  border-top: 1px solid var(--border);
 }
 
 @media (min-width: 769px) {
