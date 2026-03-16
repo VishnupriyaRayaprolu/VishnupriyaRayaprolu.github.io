@@ -289,6 +289,44 @@ body {
   font-weight: 600;
 }
 
+/* Theme toggle */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  margin-bottom: 1rem;
+  background: var(--muted);
+  border: none;
+  border-radius: 8px;
+  color: var(--muted-foreground);
+  cursor: pointer;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--primary);
+  background: var(--border);
+}
+
+.theme-icon-sun {
+  display: none;
+}
+
+.theme-icon-moon {
+  display: block;
+}
+
+.dark .theme-icon-sun {
+  display: block;
+}
+
+.dark .theme-icon-moon {
+  display: none;
+}
+
 .sidebar-footer {
   display: flex;
   flex-wrap: wrap;
@@ -424,15 +462,15 @@ body {
   padding: 0.6rem 1.25rem;
   font-size: 0.9rem;
   font-weight: 600;
-  background: #fff;
-  border: 2px solid #1a1a1a;
+  background: var(--card);
+  border: 2px solid var(--foreground);
   border-radius: 4px;
-  color: #1a1a1a;
+  color: var(--foreground);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 
 .hero-tags .tag:hover {
-  background: #f5f5f5;
+  background: var(--muted);
 }
 
 .hero-download-wrap {
@@ -447,9 +485,9 @@ body {
   padding: 1rem 2.5rem;
   font-size: 1.05rem;
   font-weight: 700;
-  background: #1a1a1a;
-  color: #fff;
-  border: 2px solid #1a1a1a;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  border: 2px solid var(--primary);
   border-radius: 4px;
   text-decoration: none;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -457,9 +495,7 @@ body {
 }
 
 .hero .btn-download-cv:hover {
-  background: #333;
-  color: #fff;
-  border-color: #333;
+  filter: brightness(0.9);
 }
 
 .btn-download-cv {
@@ -794,10 +830,10 @@ body {
   padding: 0.25rem 0.6rem;
   font-size: 0.7rem;
   font-weight: 500;
-  background: #fff;
-  border: 1px solid #1a1a1a;
+  background: var(--card);
+  border: 1px solid var(--foreground);
   border-radius: 4px;
-  color: #1a1a1a;
+  color: var(--foreground);
 }
 
 .card-eyebrow {
@@ -1036,8 +1072,6 @@ code {
 .contact-social {
   width: 100%;
   margin: 1rem 0 0;
-  padding-top: 1rem;
-  border-top: 1px solid var(--border);
   font-size: 0.95rem;
   color: var(--muted-foreground);
 }
