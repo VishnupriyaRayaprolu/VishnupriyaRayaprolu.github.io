@@ -1012,14 +1012,14 @@ code {
 
 .contact-btn-send {
   background: var(--primary);
-  color: var(--primary-foreground);
+  color: #fff;
   border-color: var(--primary);
 }
 
 .contact-btn-send:hover {
-  filter: brightness(1.1);
-  border-color: var(--primary);
   background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
 }
 
 /* Footer */
