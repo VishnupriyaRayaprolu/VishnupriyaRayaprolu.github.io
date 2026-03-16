@@ -364,6 +364,7 @@ body {
   letter-spacing: -0.02em;
   margin-bottom: 0.5rem;
   color: var(--foreground);
+  scroll-margin-top: 1.5rem;
 }
 
 .hero p {
@@ -510,12 +511,13 @@ body {
   }
 }
 
-.section h2 {
+.section > h2 {
   font-size: 1.75rem;
   font-weight: 700;
   letter-spacing: -0.02em;
   margin-bottom: 0.25rem;
   color: var(--foreground);
+  scroll-margin-top: 1.5rem;
 }
 
 .section-label {
@@ -526,6 +528,7 @@ body {
   text-transform: uppercase;
   color: var(--muted-foreground);
   margin-bottom: 0.5rem;
+  scroll-margin-top: 1.5rem;
 }
 
 .section p {
