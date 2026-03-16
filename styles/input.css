@@ -892,31 +892,44 @@ body {
   object-fit: cover;
 }
 
-.item-row .item-head {
+.item-content {
   flex: 1;
   min-width: 0;
-  margin-bottom: 0;
-  display: block;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.25rem;
 }
 
 .exp-company {
   font-size: 1.1rem;
   font-weight: 600;
-  margin: 0 0 0.25rem;
+  margin: 0;
   color: var(--foreground);
-}
-
-.exp-role {
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--foreground);
-  margin: 0 0 0.25rem;
 }
 
 .exp-meta {
   font-size: 0.85rem;
   color: var(--muted-foreground);
   margin: 0;
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.exp-role {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--foreground);
+  margin: 0 0 0.5rem;
+}
+
+.item-content .list {
+  margin: 0;
+  padding-left: 1.1rem;
 }
 
 .item-head {
