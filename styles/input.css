@@ -882,24 +882,14 @@ body {
   transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
 }
 
-.projects-show-more .projects-show-more-text,
-.projects-show-more .projects-show-more-arrow {
-  opacity: 0;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
 .projects-show-more:hover {
   border-color: var(--primary);
   background: var(--muted);
 }
 
-.projects-show-more:hover .projects-show-more-text,
-.projects-show-more:hover .projects-show-more-arrow {
-  opacity: 1;
-}
-
 .projects-show-more-arrow {
   flex-shrink: 0;
+  transition: transform 0.2s ease;
 }
 
 .projects-show-more:hover .projects-show-more-arrow {
