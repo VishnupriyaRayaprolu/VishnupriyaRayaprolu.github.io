@@ -388,6 +388,10 @@ body {
   text-align: center;
 }
 
+.hero-name {
+  font-style: italic;
+}
+
 .hero h1 {
   font-family: var(--font-display);
   font-size: clamp(2.5rem, 5vw, 3.5rem);
