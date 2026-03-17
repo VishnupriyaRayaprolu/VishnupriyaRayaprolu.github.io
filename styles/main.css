@@ -808,8 +808,33 @@ body {
 }
 
 .projects-show-more {
-  text-align: center;
-  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 260px;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  color: var(--foreground);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.projects-show-more:hover {
+  border-color: var(--primary);
+  background: var(--muted);
+}
+
+.projects-show-more-arrow {
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.projects-show-more:hover .projects-show-more-arrow {
+  transform: translateX(4px);
 }
 
 .project-card {
