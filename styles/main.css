@@ -935,10 +935,47 @@ body {
   padding: 0.25rem 0.6rem;
   font-size: 0.7rem;
   font-weight: 500;
-  background: var(--card);
-  border: 1px solid var(--foreground);
   border-radius: 4px;
-  color: var(--foreground);
+}
+
+.project-tag-design {
+  color: rgb(96, 165, 250);
+  background: rgba(147, 197, 253, 0.12);
+  border: 1px solid rgba(147, 197, 253, 0.5);
+}
+
+.project-tag-tools {
+  color: rgb(34, 197, 94);
+  background: rgba(167, 243, 208, 0.12);
+  border: 1px solid rgba(167, 243, 208, 0.5);
+}
+
+.project-tag-technical {
+  color: rgb(251, 146, 60);
+  background: rgba(253, 186, 116, 0.12);
+  border: 1px solid rgba(253, 186, 116, 0.5);
+}
+
+.project-tag-domain {
+  color: rgb(167, 139, 250);
+  background: rgba(196, 181, 253, 0.12);
+  border: 1px solid rgba(196, 181, 253, 0.5);
+}
+
+.dark .project-tag-design {
+  color: rgb(147, 197, 253);
+}
+
+.dark .project-tag-tools {
+  color: rgb(134, 239, 172);
+}
+
+.dark .project-tag-technical {
+  color: rgb(253, 186, 116);
+}
+
+.dark .project-tag-domain {
+  color: rgb(196, 181, 253);
 }
 
 .card-eyebrow {
