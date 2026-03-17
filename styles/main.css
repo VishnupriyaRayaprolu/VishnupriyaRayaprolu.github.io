@@ -39,9 +39,9 @@
   --bg: var(--background);
   --bg-elevated: var(--card);
   --text: var(--foreground);
-  --font-sans: "Nunito Sans", system-ui, sans-serif;
+  --font-sans: "Roboto Slab", serif;
   --font-display: var(--font-sans);
-  --font-mono: "Nunito Sans", ui-monospace, monospace;
+  --font-mono: "Roboto Slab", ui-monospace, monospace;
   --radius-lg: calc(var(--radius) + 2px);
   --sidebar-width: 260px;
 }
