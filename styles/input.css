@@ -28,7 +28,7 @@
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --radius: 0.875rem;
+  --radius: 1.25rem;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: oklch(0.205 0 0);
@@ -37,7 +37,7 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-  --radius-lg: calc(var(--radius) + 4px);
+  --radius-lg: calc(var(--radius) + 6px);
   --sidebar-width: 260px;
 }
 
@@ -105,7 +105,7 @@
   --color-chart-5: var(--chart-5);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: calc(var(--radius) + 4px);
+  --radius-lg: calc(var(--radius) + 6px);
   --radius-xl: calc(var(--radius) + 4px);
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
@@ -301,7 +301,7 @@ body {
   margin-bottom: 1rem;
   background: var(--muted);
   border: none;
-  border-radius: 8px;
+  border-radius: var(--radius);
   color: var(--muted-foreground);
   cursor: pointer;
   transition: color 0.2s ease, background 0.2s ease;
@@ -348,7 +348,7 @@ body {
   color: var(--muted-foreground);
   text-decoration: none;
   background: var(--muted);
-  border-radius: 8px;
+  border-radius: var(--radius);
   transition: color 0.2s ease, background 0.2s ease;
 }
 
@@ -470,7 +470,7 @@ body {
   font-weight: 600;
   background: var(--card);
   border: 2px solid var(--foreground);
-  border-radius: 4px;
+  border-radius: var(--radius);
   color: var(--foreground);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
@@ -497,7 +497,7 @@ body {
   color: var(--foreground);
   background: var(--muted);
   border: 1px solid var(--border);
-  border-radius: 6px;
+  border-radius: var(--radius);
   text-decoration: none;
   transition: border-color 0.2s ease, background 0.2s ease;
 }
@@ -528,7 +528,7 @@ body {
   color: #fff;
   background: #7c3aed;
   border: none;
-  border-radius: 6px;
+  border-radius: var(--radius);
   text-decoration: none;
   transition: filter 0.2s ease;
 }
@@ -549,7 +549,7 @@ body {
   background: var(--primary);
   color: var(--primary-foreground);
   border: 2px solid var(--primary);
-  border-radius: 4px;
+  border-radius: var(--radius);
   text-decoration: none;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
@@ -566,7 +566,7 @@ body {
   background: var(--card);
   color: var(--foreground);
   border: 2px solid var(--foreground);
-  border-radius: 4px;
+  border-radius: var(--radius);
   text-decoration: none;
   transition: background 0.2s ease, color 0.2s ease;
 }
@@ -698,7 +698,7 @@ body {
 .skills-block {
   padding: 1.25rem 1.5rem;
   border: 1px solid var(--border);
-  border-radius: 4px;
+  border-radius: var(--radius);
 }
 
 .skills-block-title {
@@ -720,7 +720,7 @@ body {
   font-size: 0.7rem;
   font-weight: 600;
   border: 1px solid;
-  border-radius: 4px;
+  border-radius: var(--radius);
 }
 
 .skills-block-design {
@@ -942,7 +942,7 @@ body {
   font-weight: 600;
   background: rgba(0, 0, 0, 0.75);
   color: #fff;
-  border-radius: 4px;
+  border-radius: var(--radius);
 }
 
 .project-card-meta {
@@ -961,7 +961,7 @@ body {
   text-transform: uppercase;
   background: var(--muted);
   border: 1px solid var(--border);
-  border-radius: 4px;
+  border-radius: var(--radius);
   color: var(--muted-foreground);
 }
 
@@ -994,7 +994,7 @@ body {
   padding: 0.25rem 0.6rem;
   font-size: 0.7rem;
   font-weight: 500;
-  border-radius: 4px;
+  border-radius: var(--radius);
 }
 
 .project-tag-design {
@@ -1260,7 +1260,7 @@ body {
   padding: 0.25rem 0.6rem;
   font-size: 0.7rem;
   font-weight: 600;
-  border-radius: 6px;
+  border-radius: var(--radius);
 }
 
 .exp-tag-blue {
@@ -1520,7 +1520,7 @@ code {
   font-size: 0.9rem;
   font-weight: 600;
   border: 1px solid var(--border);
-  border-radius: 4px;
+  border-radius: var(--radius);
   background: var(--card);
   color: var(--foreground);
   text-decoration: none;
