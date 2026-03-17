@@ -632,14 +632,14 @@ body {
   margin-top: -0.25rem;
 }
 
-.section a:not(.btn-primary):not(.btn-secondary):not(.btn-download-cv):not(.contact-btn):not(.skill-tag):not(.hero-contact-btn):not(.hero-download-btn) {
+.section a:not(.btn-primary):not(.btn-secondary):not(.btn-download-cv):not(.contact-btn):not(.skill-tag):not(.hero-contact-btn):not(.hero-download-btn):not(.projects-show-more) {
   color: var(--primary);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s ease;
 }
 
-.section a:not(.btn-primary):not(.btn-secondary):not(.btn-download-cv):not(.contact-btn):not(.skill-tag):not(.hero-contact-btn):not(.hero-download-btn):hover {
+.section a:not(.btn-primary):not(.btn-secondary):not(.btn-download-cv):not(.contact-btn):not(.skill-tag):not(.hero-contact-btn):not(.hero-download-btn):not(.projects-show-more):hover {
   color: var(--accent);
   text-decoration: underline;
 }
@@ -826,6 +826,7 @@ body {
 .projects-show-more:hover {
   border-color: var(--primary);
   background: var(--muted);
+  color: var(--foreground);
 }
 
 .projects-show-more-arrow {
