@@ -77,8 +77,8 @@
 }
 
 @theme inline {
-  --font-sans: "Nunito Sans", system-ui;
-  --font-mono: "Nunito Sans", ui-monospace;
+  --font-sans: "Roboto Slab", serif;
+  --font-mono: "Roboto Slab", ui-monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -146,7 +146,7 @@ html {
 
 body {
   margin: 0;
-  font-family: var(--font-sans), "Nunito Sans", system-ui, sans-serif;
+  font-family: var(--font-sans), "Roboto Slab", serif;
   line-height: 1.6;
 }
 
