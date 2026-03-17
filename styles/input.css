@@ -427,49 +427,17 @@ body {
   margin: 0 auto;
   padding: 3rem 1.5rem 2rem;
   width: 100%;
-  text-align: left;
+  text-align: center;
 }
 
-.hero-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.hero-badge {
-  display: inline-block;
-  padding: 0.35rem 0.75rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  color: var(--muted-foreground);
-}
-
-.hero-title {
+.hero h1 {
   font-family: var(--font-display);
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 700;
   letter-spacing: -0.02em;
-  margin: 0 0 0.5rem;
+  margin-bottom: 0.5rem;
   color: var(--foreground);
   scroll-margin-top: 1.5rem;
-}
-
-.hero-name {
-  font-weight: 700;
-}
-
-.hero-subtitle {
-  font-size: 0.9rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted-foreground);
-  margin: 0 0 1.5rem;
 }
 
 .hero p {
@@ -478,8 +446,10 @@ body {
 }
 
 .hero-body {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
   max-width: 95ch;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-keyword {
@@ -487,57 +457,19 @@ body {
   color: var(--primary);
 }
 
-.hero-tags {
+.hero-contact-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 2rem;
-}
-
-.hero-tag {
-  display: inline-block;
-  padding: 0.4rem 0.9rem;
-  font-size: 0.85rem;
-  font-weight: 600;
-  background: var(--muted);
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  color: var(--foreground);
-}
-
-.hero-tag:hover {
-  background: var(--card);
-}
-
-.hero-stats {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem 3rem;
-  margin-bottom: 2rem;
-}
-
-.hero-stat {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.hero-stat-num {
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: var(--foreground);
-}
-
-.hero-stat-label {
-  font-size: 0.9rem;
-  color: var(--muted-foreground);
-}
-
-.hero-cta {
-  display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
   gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.hero-download-wrap {
+  display: flex;
+  justify-content: center;
   align-items: center;
+  margin: 0 auto;
 }
 
 .hero-contact-btn {
@@ -571,8 +503,8 @@ body {
   padding: 1rem 2rem;
   font-size: 1.05rem;
   font-weight: 700;
-  color: var(--primary-foreground);
-  background: var(--primary);
+  color: #fff;
+  background: #7c3aed;
   border: none;
   border-radius: 6px;
   text-decoration: none;
