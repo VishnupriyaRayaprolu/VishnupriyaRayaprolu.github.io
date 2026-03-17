@@ -807,6 +807,11 @@ body {
   }
 }
 
+.projects-show-more {
+  text-align: center;
+  margin-top: 2rem;
+}
+
 .project-card {
   background: var(--card);
   border-radius: var(--radius-lg);
