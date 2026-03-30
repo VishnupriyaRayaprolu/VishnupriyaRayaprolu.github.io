@@ -1145,6 +1145,7 @@ body {
 }
 
 .exp-timeline-icon {
+  position: relative;
   flex-shrink: 0;
   width: 48px;
   height: 48px;
@@ -1327,21 +1328,25 @@ body {
   object-fit: cover;
 }
 
-.exp-logo img.exp-logo-light {
+.exp-logo img.exp-logo-light,
+.exp-timeline-icon img.exp-logo-light {
   display: block;
 }
 
-.exp-logo img.exp-logo-dark {
+.exp-logo img.exp-logo-dark,
+.exp-timeline-icon img.exp-logo-dark {
   display: none;
   position: absolute;
   inset: 0;
 }
 
-.dark .exp-logo img.exp-logo-light {
+.dark .exp-logo img.exp-logo-light,
+.dark .exp-timeline-icon img.exp-logo-light {
   display: none;
 }
 
-.dark .exp-logo img.exp-logo-dark {
+.dark .exp-logo img.exp-logo-dark,
+.dark .exp-timeline-icon img.exp-logo-dark {
   display: block;
 }
 
