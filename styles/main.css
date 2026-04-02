@@ -766,17 +766,47 @@ body {
   background: rgba(34, 211, 238, 0.12);
   border-color: rgba(34, 211, 238, 0.5);
   text-decoration: none;
-  transition: opacity 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease,
+    color 0.2s ease;
 }
 
 .skills-block-certifications .skill-tag:hover {
-  opacity: 0.9;
-  border-color: rgba(34, 211, 238, 0.8);
+  background: rgba(34, 211, 238, 0.22);
+  border-color: rgb(6, 182, 212);
+  box-shadow: 0 4px 14px rgba(6, 182, 212, 0.28);
+  transform: translateY(-2px);
+}
+
+.skills-block-certifications .skill-tag:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
+  border-color: rgb(6, 182, 212);
 }
 
 .dark .skills-block-certifications .skills-block-title,
 .dark .skills-block-certifications .skill-tag {
   color: rgb(34, 211, 238);
+}
+
+.dark .skills-block-certifications .skill-tag:hover {
+  background: rgba(34, 211, 238, 0.2);
+  border-color: rgb(34, 211, 238);
+  box-shadow: 0 4px 16px rgba(34, 211, 238, 0.22);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skills-block-certifications .skill-tag {
+    transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .skills-block-certifications .skill-tag:hover {
+    transform: none;
+  }
 }
 
 /* Projects */
