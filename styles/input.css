@@ -632,6 +632,10 @@ body {
   font-weight: 700;
 }
 
+.section-heading-exp {
+  font-family: var(--font-sans), "Nunito Sans", system-ui, sans-serif;
+}
+
 .section-label {
   display: block;
   font-size: 0.7rem;
@@ -1146,6 +1150,7 @@ body {
 /* Experience timeline */
 .section-experience .exp-timeline {
   margin-top: 1.75rem;
+  font-family: var(--font-sans), "Nunito Sans", system-ui, sans-serif;
 }
 
 .exp-timeline {
@@ -1732,19 +1737,6 @@ code {
   .projects-show-more {
     min-height: 200px;
     font-size: 0.9rem;
-  }
-
-  .section-experience .exp-timeline {
-    font-family: ui-monospace, "SFMono-Regular", Menlo, Monaco, "Cascadia Mono", monospace;
-    font-size: 0.9rem;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  .section-heading-exp {
-    font-family: ui-monospace, "SFMono-Regular", Menlo, Monaco, monospace;
-    font-size: clamp(1.45rem, 4.5vw + 0.5rem, 1.75rem);
-    letter-spacing: -0.03em;
-    line-height: 1.2;
   }
 
   .exp-timeline {
